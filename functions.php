@@ -2,7 +2,8 @@
 
 // require_once( dirname(__FILE__) . '/CMB2/cmb2SobreNos.php' );
 require_once( dirname(__FILE__) . '/CMB2/cmb2_inteligencia.php' );
-require_once( dirname(__FILE__) . '/CMB2/cmb2_header-footer.php' );
+require_once( dirname(__FILE__) . '/CMB2/cmb2_header.php' );
+require_once( dirname(__FILE__) . '/CMB2/cmb2_footer.php' );
 
 function get_field($field, $page = NULL, $unique = true) {
   $page = is_null($page) ? get_the_ID() : $page;
