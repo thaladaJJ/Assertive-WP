@@ -40,6 +40,35 @@ function header_footer_scripts() {
     wp_enqueue_script('header-footer', get_stylesheet_directory_uri() . '/JS/header-footer.js', array(), null, true);
 }
 
-add_action('wp_enqueue_scripts', 'header_footer_scripts');
+add_action ('wp_enqueue_scripts', 'header_footer_scripts');
+
+add_action ( 'admin_footer', function() {
+    $screen = get_current_screen();
+    if ( $screen && $screen->post_type === 'page' ) :  
+?>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const rangeInput = document.querySelector('input[name="posicao_cor_imagem_hero"]');
+
+    if (rangeInput) {
+        
+        const feedback = document.createElement('div');
+        feedback.id = 'posicao_cor_feedback';
+        feedback.style.marginTop = '5px';
+        feedback.style.fontWeight = 'bold';
+        rangeInput.parentNode.appendChild(feedback);
+
+        function updateOutput() {
+            feedback.innerHTML = 'Valor atual: <span>' + rangeInput.value + '%</span>';
+        }
+
+        rangeInput.addEventListener('input', updateOutput);
+        updateOutput();
+    }
+});
+</script>
+<?php
+    endif;
+});
 
 ?>
