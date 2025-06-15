@@ -205,9 +205,75 @@ function fields_inteligencia_funcoes() {
 
 }
 
+function fields_inteligencia_etapas() {
+   $inteligencia_etapas_box = new_cmb2_box([
+        'id' => 'inteligencia_etapas_box',
+        'title' => 'Inteligência de Mercado - Principais Etapas',
+        'object_types' => ['page'],
+        'show_on' => [
+            'key' => 'page-template', 
+            'value' => 'page-inteligencia.php'
+        ]
+    ]);
+    
+    $inteligencia_etapas_box->add_field([
+        'name' => 'Título Principal',
+        'desc' => 'Frase de fonte grande no topo da seção',
+        'id' => 'titulo_etapas',
+        'type' => 'text',
+        'default' => 'Como funciona o serviço',    
+    ]);
+
+    $inteligencia_etapas_box->add_field([
+        'name' => 'Título - Etapa 1',
+        'desc' => 'Frase de destaque referente ao passo 1.',
+        'id' => 'titulo_etapa_1',
+        'type' => 'text',
+        'default' => 'Análise de concorrentes',    
+    ]);
+
+    $inteligencia_etapas_box->add_field([
+        'name' => 'Descrição - Etapa 1',
+        'desc' => 'Texto abaixo do título na etapa 1.',
+        'id' => 'texto_etapa_1',
+        'type' => 'textarea_small',    
+    ]);
+
+    $inteligencia_etapas_box->add_field([
+        'name' => 'Título - Etapa 2',
+        'desc' => 'Frase de destaque referente ao passo 2.',
+        'id' => 'titulo_etapa_2',
+        'type' => 'text',
+        'default' => 'Análise Territorial',    
+    ]);
+
+    $inteligencia_etapas_box->add_field([
+        'name' => 'Descrição - Etapa 2',
+        'desc' => 'Texto abaixo do título na etapa 2.',
+        'id' => 'texto_etapa_2',
+        'type' => 'textarea_small',    
+    ]);
+
+    $inteligencia_etapas_box->add_field([
+        'name' => 'Título - Etapa 3',
+        'desc' => 'Frase de destaque referente ao passo 3.',
+        'id' => 'titulo_etapa_3',
+        'type' => 'text',
+        'default' => 'Share de mercado',    
+    ]);
+
+    $inteligencia_etapas_box->add_field([
+        'name' => 'Descrição - Etapa 3',
+        'desc' => 'Texto abaixo do título na etapa 3.',
+        'id' => 'texto_etapa_3',
+        'type' => 'textarea_small',    
+    ]);
+}
+
 add_action ('cmb2_admin_init', 'fields_inteligencia_hero');
 add_action ('cmb2_admin_init', 'fields_inteligencia_sobre');
 add_action ('cmb2_admin_init', 'fields_inteligencia_funcoes');
+add_action ('cmb2_admin_init', 'fields_inteligencia_etapas');
 
 
 

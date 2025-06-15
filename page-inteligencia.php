@@ -79,7 +79,7 @@
     </section>
 
     <div class="how-it-works-container">
-        <h2>Como funciona o serviço</h2>
+        <h2> <?php the_field ('titulo_etapas'); ?> </h2>
 
         <div class="how-it-works-grid">
             <div class="dots-container">
@@ -93,20 +93,20 @@
             <div class="information-container inria-sans-font">
                 <div class="dot">1.</div>
                 <div>
-                    <h1 class="inria-sans-bold">Análise de concorrentes</h1>
-                    <p class="inria-sans-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate fermentum massa vel ultricies. Morbi nec augue id lorem eleifend.</p>
+                    <h1 class="inria-sans-bold"> <?php the_field ('titulo_etapa_1'); ?> </h1>
+                    <p class="inria-sans-regular"> <?php the_field ('texto_etapa_1'); ?> </p>
                 </div>
 
                 <div class="dot">2.</div>
                 <div>
-                    <h1 class="inria-sans-bold">Análise Territorial</h1>
-                    <p class="inria-sans-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate fermentum massa vel ultricies. Morbi nec augue id lorem eleifend.</p>
+                    <h1 class="inria-sans-bold"> <?php the_field ('titulo_etapa_2'); ?> </h1>
+                    <p class="inria-sans-regular"> <?php the_field ('texto_etapa_2'); ?> </p>
                 </div>
 
                 <div class="dot">3.</div>
                 <div>
-                    <h1 class="inria-sans-bold">Share de mercado</h1>
-                    <p class="inria-sans-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate fermentum massa vel ultricies. Morbi nec augue id lorem eleifend.</p>
+                    <h1 class="inria-sans-bold"> <?php the_field ('titulo_etapa_3'); ?> </h1>
+                    <p class="inria-sans-regular"> <?php the_field ('texto_etapa_3'); ?> </p>
                 </div>
             </div>
         </div>
